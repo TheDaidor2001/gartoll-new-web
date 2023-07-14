@@ -14,7 +14,7 @@ const toggleMenu = () => {
 <template>
     <header class="bg-gray-950 z-10 sticky top-0">
         <nav class="max-w-screen-2xl mx-auto flex p-5 justify-between items-center">
-            <img class="w-14 h-14" src="/logo.webp" alt="logo Gartoll Seguridad Privada">
+            <img class="w-10 h-10" src="/logo.webp" alt="logo Gartoll Seguridad Privada">
             <div>
                 <button v-if="!active" class="block lg:hidden" @click="toggleMenu">
                     <vMenu />
@@ -24,18 +24,18 @@ const toggleMenu = () => {
                 </button>
                 <ul v-if="active"
                     class="bg-gray-950 w-full text-center absolute top-20 left-0 h-56 transition-all flex flex-col gap-2 lg:hidden text-white">
-                    <RouterLink active-class="text-secondary" :to="{ name: 'inicio' }" class="hover:text-secondary font-bold text-xl transition-colors">Inicio
+                    <RouterLink active-class="text-secondary" :to="{ name: 'inicio' }" class="hover:text-secondary font-bold text-md transition-colors">Inicio
                     </RouterLink>
-                    <RouterLink :to="{name: 'servicios'}" active-class="text-secondary" class="hover:text-secondary font-bold text-xl transition-colors">Servicios</RouterLink>
+                    <RouterLink :to="{name: 'servicios'}" active-class="text-secondary" class="hover:text-secondary font-bold text-md transition-colors">Servicios</RouterLink>
                     <li class="text-white">Sobre Nosotros</li>
                     <li class="text-white">Noticias</li>
                     <button
-                        class="border-2 border-secondary text-secondary rounded-3xl px-2 py-1 block w-1/2 mx-auto hover:bg-secondary hover:text-white font-bold transition-colors">Contáctanos</button>
+                        class="border-2 border-secondary text-secondary rounded-3xl py-1 block w-1/2 mx-auto hover:bg-secondary hover:text-white font-bold transition-colors">Contáctanos</button>
                 </ul>
-                <ul class="hidden justify-around gap-5 lg:flex items-center text-xl text-white">
-                    <RouterLink :to="{ name: 'inicio' }" active-class="text-secondary" class="hover:text-secondary font-bold text-xl transition-colors">Inicio
+                <ul class="hidden justify-around gap-5 lg:flex items-center text-sm text-white">
+                    <RouterLink :to="{ name: 'inicio' }" active-class="text-secondary" class="hover:text-secondary font-bold text-sm transition-colors">Inicio
                     </RouterLink>
-                    <RouterLink :to="{name: 'servicios'}" active-class="text-secondary" class="hover:text-secondary font-bold text-xl transition-colors">Servicios</RouterLink>
+                    <RouterLink :to="{name: 'servicios'}" active-class="text-secondary" class="hover:text-secondary font-bold text-sm transition-colors">Servicios</RouterLink>
                     <li class="text-white">Información</li>
                     <li class="text-white">Noticias</li>
                     <button
