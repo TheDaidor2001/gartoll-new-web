@@ -39,7 +39,7 @@ const toggleMenu = () => {
                     <li class="text-white">Información</li>
                     <li class="text-white">Noticias</li>
                     <button
-                        class="border-2 border-secondary text-secondary rounded-3xl px-4 py-2 block w-1/2 mx-auto hover:bg-secondary hover:text-white font-bold transition-colors">Contáctanos</button>
+                        class="border-2 border-secondary text-secondary rounded-3xl px-3 py-1 block w-1/2 mx-auto hover:bg-secondary hover:text-white font-bold transition-colors">Contáctanos</button>
                 </ul>
             </div>
         </nav>
