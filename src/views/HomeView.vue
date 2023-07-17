@@ -61,9 +61,9 @@ import cardDiferences from '../components/UI/card-diferences.vue';
     <div class="flex flex-col gap-5 w-full lg:w-1/3">
       <h3 class="text-3xl lg:text-4xl font-normal text-gray-600">Tu empresa de <span class="font-black">Seguridad
           Privada</span></h3>
-      <p class="text-gray-500 font-thin text-md">Con más de una década de experiencia en el sector nos enorgullecemos de
+      <p class="text-gray-600 font-thin text-md">Con más de una década de experiencia en el sector nos enorgullecemos de
         ser una opción de seguridad privada confiable y dedicada.</p>
-      <p class="text-gray-500 font-thin text-md ">Hemos estado comprometidos en salvaguardar lo que más valoras, brindando
+      <p class="text-gray-600 font-thin text-md ">Hemos estado comprometidos en salvaguardar lo que más valoras, brindando
         tranquilidad a nuestros clientes en cada paso del camino. Nuestra trayectoria sólida y exitosa es el reflejo de un
         equipo altamente capacitado y apasionado por proteger a comunidades, hogares y negocios.</p>
       <button
