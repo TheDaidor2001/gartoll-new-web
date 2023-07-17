@@ -13,7 +13,7 @@ module.exports = {
         "four": '#F26419'
       },
       backgroundImage: {
-        "hero-section": "url('./public/bg-hero.svg')",
+        "hero-section": "url('/bg-hero.svg')",
       }
     },
   },
