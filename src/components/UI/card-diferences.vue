@@ -18,7 +18,7 @@
             <slot />
         </div>
         <h4 class="font-semibold text-gray-800 text-xl mt-4 text-center md:text-left">{{ title }}</h4>
-        <p class="font-thin text-sm mt-3 text-center md:text-left">{{ description }}</p>
+        <p class="font-thin text-sm mt-3 text-center md:text-left text-gray-600">{{ description }}</p>
     </div>
 </template>
 

@@ -80,8 +80,8 @@ import cardDiferences from '../components/UI/card-diferences.vue';
     <img class="w-[500px]" src="/seguridad.webp" alt="">
   </section>
 
-  <section class="my-20 px-20 lg:px-40">
-    <h3 class="text-center text-4xl lg:text-4xl font-bold text-gray-700 uppercase">Ofrecemos el mejor trabajo e idea para
+  <section class="my-20 px-10 lg:px-40">
+    <h3 class="text-center text-3xl md:text-4xl font-bold text-gray-700 uppercase">Ofrecemos el mejor trabajo e idea para
       ti.</h3>
     <p class="w-full lg:w-2/3 mx-auto text-sm lg:text-lg mt-5 text-center font-thin text-gray-500">Nuestra forma de
       abordar la seguridad está basada en una serie de ventajas competitivas que nos posicionan como referentes en nuestro
