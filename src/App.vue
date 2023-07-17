@@ -5,7 +5,7 @@ import vMenu from './components/UI/v-menu-item.vue'
 
 <template>
   <vMenu />
-  <main class="">
+  <main>
     <RouterView />
   </main>
 </template>
