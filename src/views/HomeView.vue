@@ -5,17 +5,11 @@ import cardDiferences from '../components/UI/card-diferences.vue';
 </script>
 
 <template>
-  <section class="pt-20 pb-10 relative overflow-hidden">
-    <div
-      class="block absolute bg-secondary w-80 h-80 lg:w-[600px]  lg:h-[600px] opacity-30 rounded-full -z-10 top-0 -left-20 lg:-top-28 lg:-left-28">
-    </div>
-    <div
-      class="block absolute bg-thirth w-80 h-80 lg:w-[800px]  lg:h-[800px] opacity-20 rounded-full -z-10 top-20 -right-20 lg:-right-36 lg:top-52 ">
-    </div>
+  <section class="pt-20 pb-20 xl:pb-10 overflow-hidden h-auto bg-hero-section bg-cover">
     <div class="flex flex-col lg:flex-row gap-5 items-center justify-center max-w-7xl mx-auto">
       <div class="w-full xl:w-1/2">
-        <h1 class="text-4xl lg:text-7xl text-center font-black  text-secondary uppercase">Gartoll</h1>
-        <h2 class="text-center text-gray-900 text-3xl lg:text-5xl font-black uppercase">Seguridad Privada</h2>
+        <h1 class="text-4xl lg:text-7xl text-center font-black  text-gray-900 uppercase">Gartoll</h1>
+        <h2 class="text-center text-gray-800 text-3xl lg:text-5xl font-semibold uppercase">Seguridad Privada</h2>
         <div class="w-full xl:w-2/3 mx-auto">
           <p class="mt-5 text-center mx-auto text-gray-700 px-10 lg:px-0">Nuestro equipo de seguridad privada está
             preparado
@@ -23,12 +17,12 @@ import cardDiferences from '../components/UI/card-diferences.vue';
             dedicación.</p>
         </div>
         <button
-          class="text-center text-xl lg:text-2xl font-bold block bg-secondary mx-auto mt-5 text-white px-10 py-2 rounded-lg hover:bg-amber-300 transition-colors w-72 shadow-md">
+          class="text-center text-xl lg:text-2xl font-black block mx-auto mt-5 border-2 border-gray-800 text-gray-800 px-10 py-2 rounded-lg hover:bg-gray-800 hover:text-white   transition-colors w-72 shadow-md">
           Empezar
         </button>
       </div>
       <div class="hidden xl:block -mt-16 mx-auto">
-        <img class="w-[500px] h-[500px]" src="/hero.png" alt="">
+        <img class="w-[550px] h-[550px]" src="/hero.png" alt="">
       </div>
     </div>
   </section>
@@ -88,8 +82,7 @@ import cardDiferences from '../components/UI/card-diferences.vue';
       sector.</p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 mt-10 gap-5">
-      <cardDiferences title="Buen Servicio" description="Tratamos a cada cliente desde un enfoque personalizado, cercano, a la vez que
-        profesional y resolutivo. Sus necesidades son las nuestras." color="bg-secondary">
+      <cardDiferences title="Buen Servicio" description="En Gartoll seguridad privada, ofrecemos servicios de excelencia, brindando protección confiable y tranquilidad absoluta a nuestros clientes." color="bg-secondary">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
           class="w-8 h-8">
           <path stroke-linecap="round" stroke-linejoin="round"
@@ -98,7 +91,7 @@ import cardDiferences from '../components/UI/card-diferences.vue';
 
       </cardDiferences>
       <cardDiferences title="Calidad"
-        description="Entendemos la calidad como un elemento indispensable en todos nuestros proyectos, que los modela y perfecciona." color="bg-thirth">
+        description="Somos una empresa de seguridad privada comprometida con la calidad, proporcionando soluciones efectivas y confiables para proteger lo que más valoras." color="bg-thirth">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
           class="w-8 h-8">
           <path stroke-linecap="round" stroke-linejoin="round"
@@ -106,7 +99,7 @@ import cardDiferences from '../components/UI/card-diferences.vue';
         </svg>
       </cardDiferences>
       <cardDiferences title="Equipo Profesional"
-        description="Tenemos profesionales coalificados para que realicen el servicio de vigilancia de una forma profesional y efectiva." color="bg-gray-900">
+        description="Contamos con un equipo altamente profesional, preparado para salvaguardar tus intereses y garantizar la tranquilidad que mereces." color="bg-gray-900">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
           class="w-8 h-8">
           <path stroke-linecap="round" stroke-linejoin="round"
