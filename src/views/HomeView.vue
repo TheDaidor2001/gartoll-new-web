@@ -12,7 +12,7 @@ import cardDiferences from '../components/UI/card-diferences.vue';
     <div
       class="block absolute bg-thirth w-80 h-80 lg:w-[800px]  lg:h-[800px] opacity-20 rounded-full -z-10 top-20 -right-20 lg:-right-36 lg:top-52 ">
     </div>
-    <div class="flex flex-col lg:flex-row gap-5 items-center justify-center">
+    <div class="flex flex-col lg:flex-row gap-5 items-center justify-center max-w-7xl mx-auto">
       <div class="w-full xl:w-1/2">
         <h1 class="text-4xl lg:text-7xl text-center font-black  text-secondary uppercase">Gartoll</h1>
         <h2 class="text-center text-gray-900 text-3xl lg:text-5xl font-black uppercase">Seguridad Privada</h2>
@@ -33,7 +33,7 @@ import cardDiferences from '../components/UI/card-diferences.vue';
     </div>
   </section>
 
-  <section class="py-10 flex flex-col lg:flex-row gap-5 px-10 md:px-16 lg:px-32">
+  <section class="py-10 flex flex-col lg:flex-row gap-5 px-10 md:px-16 max-w-7xl mx-auto">
     <cardInfo title="Analisis de Objetivos"
       info="Analizamos detalladamente los objetivos individuales de cada cliente, permitiéndonos ofrecer soluciones precisas y adaptadas a sus necesidades.">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
@@ -80,7 +80,7 @@ import cardDiferences from '../components/UI/card-diferences.vue';
     <img class="w-[500px]" src="/seguridad.webp" alt="">
   </section>
 
-  <section class="my-20 px-10 lg:px-40">
+  <section class="my-20 px-10 max-w-7xl mx-auto">
     <h3 class="text-center text-3xl md:text-4xl font-bold text-gray-700 uppercase">Ofrecemos el mejor trabajo e idea para
       ti.</h3>
     <p class="w-full lg:w-2/3 mx-auto text-sm lg:text-lg mt-5 text-center font-thin text-gray-500">Nuestra forma de
