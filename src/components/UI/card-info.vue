@@ -16,7 +16,7 @@
         </div>
         <div class="border-0 xl:border-l-4 border-secondary">
             <h3 class="text-xl font-semibold uppe text-gray-800 mb-3 ml-0 lg:ml-5">{{ title }}</h3>
-            <p class="lg:ml-5 ml-0 text-gray-700 text-md lg:pr-2 font-thin"> {{ info }}</p>
+            <p class="lg:ml-5 ml-0 text-gray-700 text-md lg:pr-2 font-light"> {{ info }}</p>
         </div>
     </div>
 </template>
