@@ -1,6 +1,8 @@
 <script setup>
 import cardInfo from '../components/UI/card-info.vue';
 import cardDiferences from '../components/UI/card-diferences.vue';
+import headingText from '../components/UI/heading-text.vue';
+import cardServices from '../components/UI/card-services.vue'
 
 </script>
 
@@ -75,14 +77,14 @@ import cardDiferences from '../components/UI/card-diferences.vue';
   </section>
 
   <section class="my-20 px-10 max-w-7xl mx-auto">
-    <h3 class="text-center text-3xl md:text-4xl font-bold text-gray-700 uppercase">Ofrecemos el mejor trabajo e idea para
-      ti.</h3>
-    <p class="w-full lg:w-2/3 mx-auto text-sm lg:text-lg mt-5 text-center font-thin text-gray-500">Nuestra forma de
-      abordar la seguridad está basada en una serie de ventajas competitivas que nos posicionan como referentes en nuestro
-      sector.</p>
 
+    <headingText title="Ofrecemos el mejor trabajo e idea para ti." description="Nuestra forma de
+      abordar la seguridad está basada en una serie de ventajas competitivas que nos posicionan como referentes en nuestro
+      sector." />
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 mt-10 gap-5">
-      <cardDiferences title="Buen Servicio" description="En Gartoll seguridad privada, ofrecemos servicios de excelencia, brindando protección confiable y tranquilidad absoluta a nuestros clientes." color="bg-secondary">
+      <cardDiferences title="Buen Servicio"
+        description="En Gartoll seguridad privada, ofrecemos servicios de excelencia, brindando protección confiable y tranquilidad absoluta a nuestros clientes."
+        color="bg-secondary">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
           class="w-8 h-8">
           <path stroke-linecap="round" stroke-linejoin="round"
@@ -91,7 +93,8 @@ import cardDiferences from '../components/UI/card-diferences.vue';
 
       </cardDiferences>
       <cardDiferences title="Calidad"
-        description="Somos una empresa de seguridad privada comprometida con la calidad, proporcionando soluciones efectivas y confiables para proteger lo que más valoras." color="bg-thirth">
+        description="Somos una empresa de seguridad privada comprometida con la calidad, proporcionando soluciones efectivas y confiables para proteger lo que más valoras."
+        color="bg-thirth">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
           class="w-8 h-8">
           <path stroke-linecap="round" stroke-linejoin="round"
@@ -99,7 +102,8 @@ import cardDiferences from '../components/UI/card-diferences.vue';
         </svg>
       </cardDiferences>
       <cardDiferences title="Equipo Profesional"
-        description="Contamos con un equipo altamente profesional, preparado para salvaguardar tus intereses y garantizar la tranquilidad que mereces." color="bg-gray-900">
+        description="Contamos con un equipo altamente profesional, preparado para salvaguardar tus intereses y garantizar la tranquilidad que mereces."
+        color="bg-gray-900">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
           class="w-8 h-8">
           <path stroke-linecap="round" stroke-linejoin="round"
@@ -108,7 +112,8 @@ import cardDiferences from '../components/UI/card-diferences.vue';
 
       </cardDiferences>
       <cardDiferences title="Experiencia"
-        description="Más de 10 años de experiencia nos avalan, dando servicio a todo tipo de clientes y corporaciones." color="bg-four">
+        description="Más de 10 años de experiencia nos avalan, dando servicio a todo tipo de clientes y corporaciones."
+        color="bg-four">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
           class="w-8 h-8">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -117,4 +122,38 @@ import cardDiferences from '../components/UI/card-diferences.vue';
       </cardDiferences>
     </div>
   </section>
-</template>
+
+  <section class="my-20 px-10 max-w-7xl mx-auto">
+    <headingText title="Nuestros servicios"
+      description="Servicios personalizados para potenciar tu negocio y proteger todos tus bienes preciados." />
+    <div class="max-w-7xl mx-auto mt-10">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+        <div class="flex flex-col gap-5 items-center">
+          <cardServices 
+            title="Vigilancia"
+            description="Tenemos sistemas de vigilancia para empresas, casas particulares y también
+            para los eventos."
+            position="text-end"
+          />
+          <cardServices 
+            title="Guarda Espaldas"
+            description="Tenemos personal muy competente para escoltar y proteger a cualquiera que solicite este servicio."
+            position="text-end"
+          />
+        </div>
+        <img class="w-64 mx-auto" src="/security.png" alt="">
+        <div class="flex flex-col gap-5 items-center">
+          <cardServices 
+            title="Cámaras y alarmas"
+            description="Disponemos de cámaras de seguridad y alarmas de alta calidad para poder localizar a los intrusos."
+            position="text-start"
+          />
+          <cardServices 
+            title="Transporte de dinero"
+            description="Tenemos camiones blindados muy seguros para asegurar los transportes del dinero en cualquier parte del pais."
+            position="text-start"
+          />
+        </div>
+    </div>
+  </div>
+</section></template>
