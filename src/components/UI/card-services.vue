@@ -19,7 +19,7 @@ import { RouterLink } from 'vue-router';
         <RouterLink to="/">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{ title }}</h5>
         </RouterLink>
-        <p class="mb-3 font-normal text-gray-700">{{ description }}</p>
+        <p class="mb-3 font-thin text-gray-700">{{ description }}</p>
         <RouterLink to="/"
             class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-secondary rounded-lg">
             Saber más

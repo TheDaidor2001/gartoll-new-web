@@ -1,4 +1,5 @@
 <script setup>
+import vMenu from '../components/UI/v-menu-item.vue'
 import cardInfo from '../components/UI/card-info.vue';
 import cardDiferences from '../components/UI/card-diferences.vue';
 import headingText from '../components/UI/heading-text.vue';
@@ -7,6 +8,7 @@ import cardServices from '../components/UI/card-services.vue'
 </script>
 
 <template>
+  <vMenu />
   <section class="pt-20 pb-20 xl:pb-10 overflow-hidden h-auto bg-hero-section bg-cover">
     <div class="flex flex-col lg:flex-row gap-5 items-center justify-center max-w-7xl mx-auto">
       <div class="w-full xl:w-1/2">
