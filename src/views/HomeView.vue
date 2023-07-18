@@ -12,10 +12,10 @@ import cardServices from '../components/UI/card-services.vue'
   <section class="pt-20 pb-20 xl:pb-10 overflow-hidden h-auto bg-hero-section bg-cover">
     <div class="flex flex-col lg:flex-row gap-5 items-center justify-center max-w-7xl mx-auto">
       <div class="w-full xl:w-1/2">
-        <h1 class="text-4xl lg:text-7xl text-center font-black  text-gray-900 uppercase">Gartoll</h1>
-        <h2 class="text-center text-gray-800 text-3xl lg:text-5xl font-semibold uppercase">Seguridad Privada</h2>
+        <h1 class="text-6xl lg:text-8xl text-center font-black  text-gray-900 uppercase">Gartoll</h1>
+        <h2 class="text-center text-gray-800 text-4xl lg:text-6xl font-semibold uppercase">Seguridad Privada</h2>
         <div class="w-full xl:w-2/3 mx-auto">
-          <p class="mt-5 text-center mx-auto text-gray-700 px-10 lg:px-0">Nuestro equipo de seguridad privada está
+          <p class="mt-5 text-center text-lg mx-auto text-gray-700 px-10 lg:px-0">Nuestro equipo de seguridad privada está
             preparado
             para protegerlo en todo momento, brindando tranquilidad, confianza y servicio impecable con profesionalismo y
             dedicación.</p>
@@ -63,11 +63,11 @@ import cardServices from '../components/UI/card-services.vue'
   <section
     class="py-10 px-10 lg:px-0 mx-auto container flex flex-col-reverse lg:flex-row justify-center items-center gap-10 text-center lg:text-left">
     <div class="flex flex-col gap-5 w-full lg:w-1/3">
-      <h3 class="text-3xl lg:text-4xl font-normal text-gray-600">Tu empresa de <span class="font-black">Seguridad
+      <h3 class="text-4xl lg:text-5xl font-normal text-gray-600">Tu empresa de <span class="font-black">Seguridad
           Privada</span></h3>
       <p class="text-gray-600 font-light text-md">Con más de una década de experiencia en el sector nos enorgullecemos de
         ser una opción de seguridad privada confiable y dedicada.</p>
-      <p class="text-gray-600 font-light text-md ">Hemos estado comprometidos en salvaguardar lo que más valoras, brindando
+      <p class="text-gray-600 font-light text-md">Hemos estado comprometidos en salvaguardar lo que más valoras, brindando
         tranquilidad a nuestros clientes en cada paso del camino. Nuestra trayectoria sólida y exitosa es el reflejo de un
         equipo altamente capacitado y apasionado por proteger a comunidades, hogares y negocios.</p>
       <button
@@ -80,7 +80,8 @@ import cardServices from '../components/UI/card-services.vue'
 
   <section class="my-20 px-10 max-w-7xl mx-auto">
 
-    <headingText title="Ofrecemos el mejor trabajo e idea para ti." description="Nuestra forma de
+    <headingText title="¿Qué nos diferencia?" 
+      description="Nuestra forma de
       abordar la seguridad está basada en una serie de ventajas competitivas que nos posicionan como referentes en nuestro
       sector." />
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 mt-10 gap-5">
