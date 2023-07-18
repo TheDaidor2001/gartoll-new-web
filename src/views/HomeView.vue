@@ -79,9 +79,7 @@ import cardServices from '../components/UI/card-services.vue'
   </section>
 
   <section class="my-20 px-10 max-w-7xl mx-auto">
-
-    <headingText title="¿Qué nos diferencia?" 
-      description="Nuestra forma de
+    <headingText title="¿Qué nos diferencia?" description="Nuestra forma de
       abordar la seguridad está basada en una serie de ventajas competitivas que nos posicionan como referentes en nuestro
       sector." />
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 mt-10 gap-5">
@@ -126,37 +124,28 @@ import cardServices from '../components/UI/card-services.vue'
     </div>
   </section>
 
-  <section class="my-20 px-10 max-w-7xl mx-auto">
+  <section class="my-32 px-10 max-w-7xl mx-auto">
     <headingText title="Nuestros servicios"
       description="Servicios personalizados para potenciar tu negocio y proteger todos tus bienes preciados." />
     <div class="max-w-7xl mx-auto mt-10">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10 items-center">
         <div class="flex flex-col gap-5 items-center">
-          <cardServices 
-            title="Vigilancia"
-            description="Tenemos sistemas de vigilancia para empresas, casas particulares y también
-            para los eventos."
-            position="text-end"
-          />
-          <cardServices 
-            title="Guarda Espaldas"
+          <cardServices title="Vigilancia" description="Tenemos sistemas de vigilancia para empresas, casas particulares y también
+            para los eventos." position="text-end" />
+          <cardServices title="Guarda Espaldas"
             description="Tenemos personal muy competente para escoltar y proteger a cualquiera que solicite este servicio."
-            position="text-end"
-          />
+            position="text-end" />
         </div>
         <img class="w-64 mx-auto hidden lg:block" src="/security.png" alt="">
         <div class="flex flex-col gap-5 items-center">
-          <cardServices 
-            title="Cámaras y alarmas"
+          <cardServices title="Cámaras y alarmas"
             description="Disponemos de cámaras de seguridad y alarmas de alta calidad para poder localizar a los intrusos."
-            position="text-start"
-          />
-          <cardServices 
-            title="Transporte de dinero"
+            position="text-start" />
+          <cardServices title="Transporte de dinero"
             description="Tenemos camiones blindados muy seguros para asegurar los transportes del dinero en cualquier parte del pais."
-            position="text-start"
-          />
+            position="text-start" />
         </div>
+      </div>
     </div>
-  </div>
-</section></template>
+  </section>
+</template>
