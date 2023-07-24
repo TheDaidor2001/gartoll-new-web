@@ -3,13 +3,14 @@ import vMenu from '../components/UI/v-menu-item.vue'
 import cardInfo from '../components/UI/card-info.vue';
 import cardDiferences from '../components/UI/card-diferences.vue';
 import headingText from '../components/UI/heading-text.vue';
-import cardServices from '../components/UI/card-services.vue'
+import cardServices from '../components/UI/card-services.vue';
+import cardAnimated from '../components/UI/card-animated.vue';
 
 </script>
 
 <template>
   <vMenu />
-  <section class="pt-20 pb-20 xl:pb-10 overflow-hidden h-auto bg-hero-section bg-cover">
+  <section class="pt-20 pb-20 xl:pb-0 overflow-hidden h-auto bg-hero-section bg-cover">
     <div class="flex flex-col lg:flex-row gap-5 items-center justify-center max-w-7xl mx-auto">
       <div class="w-full xl:w-1/2">
         <h1 class="text-6xl lg:text-8xl text-center font-black  text-gray-900 uppercase">Gartoll</h1>
@@ -124,28 +125,84 @@ import cardServices from '../components/UI/card-services.vue'
     </div>
   </section>
 
-  <section class="my-32 px-10 max-w-7xl mx-auto">
+  <section class="my-28 px-10 max-w-7xl mx-auto">
     <headingText title="Nuestros servicios"
       description="Servicios personalizados para potenciar tu negocio y proteger todos tus bienes preciados." />
     <div class="max-w-7xl mx-auto mt-10">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10 items-center">
         <div class="flex flex-col gap-5 items-center">
           <cardServices title="Vigilancia" description="Tenemos sistemas de vigilancia para empresas, casas particulares y también
-            para los eventos." position="text-end" />
+            para los eventos." position="text-end" number="1" />
           <cardServices title="Guarda Espaldas"
             description="Tenemos personal muy competente para escoltar y proteger a cualquiera que solicite este servicio."
-            position="text-end" />
+            position="text-end" number="2" />
         </div>
         <img class="w-64 mx-auto hidden lg:block" src="/security.png" alt="">
         <div class="flex flex-col gap-5 items-center">
           <cardServices title="Cámaras y alarmas"
             description="Disponemos de cámaras de seguridad y alarmas de alta calidad para poder localizar a los intrusos."
-            position="text-start" />
+            position="text-start" number="3" />
           <cardServices title="Transporte de dinero"
             description="Tenemos camiones blindados muy seguros para asegurar los transportes del dinero en cualquier parte del pais."
-            position="text-start" />
+            position="text-start" number="4" />
         </div>
       </div>
     </div>
   </section>
-</template>
+
+  <section class="w-full max-w-7xl mx-auto">
+    <div class="py-10 grid grid-cols-1 xl:grid-cols-2 gap-5">
+      <div class="text-center xl:text-left flex flex-col justify-center  px-20 xl:px-0">
+        <h3 class="text-3xl xl:text-4xl font-black text-gray-800 uppercase mb-5">Contamos con una amplia experiencia profesional</h3>
+        <p class="font-light text-gray-600 text-md xl:text-lg">Con una amplia experiencia a nivel nacional y ubicaciones estratégicas en todo el país, trabajamos estrechamente con numerosas empresas y clientes para brindar servicios personalizados y de alta calidad.</p>
+      </div>
+      <div class="bg-secondary rounded-xl p-10 grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <cardAnimated
+          title="Clientes"
+          cuantity="300"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8c547" class="w-12 h-12">
+            <path fill-rule="evenodd"
+              d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+              clip-rule="evenodd" />
+          </svg>
+
+        </cardAnimated>
+        <cardAnimated
+          title="Trabajadores"
+          cuantity="1300"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8c547" class="w-12 h-12">
+            <path fill-rule="evenodd"
+              d="M7.5 5.25a3 3 0 013-3h3a3 3 0 013 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0112 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 017.5 5.455V5.25zm7.5 0v.09a49.488 49.488 0 00-6 0v-.09a1.5 1.5 0 011.5-1.5h3a1.5 1.5 0 011.5 1.5zm-3 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z"
+              clip-rule="evenodd" />
+            <path
+              d="M3 18.4v-2.796a4.3 4.3 0 00.713.31A26.226 26.226 0 0012 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 01-6.477-.427C4.047 21.128 3 19.852 3 18.4z" />
+          </svg>
+
+        </cardAnimated>
+        <cardAnimated
+          title="Empresas"
+          cuantity="100"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8c547" class="w-12 h-12">
+            <path fill-rule="evenodd"
+              d="M4.5 2.25a.75.75 0 000 1.5v16.5h-.75a.75.75 0 000 1.5h16.5a.75.75 0 000-1.5h-.75V3.75a.75.75 0 000-1.5h-15zM9 6a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H9zm-.75 3.75A.75.75 0 019 9h1.5a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75zM9 12a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H9zm3.75-5.25A.75.75 0 0113.5 6H15a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM13.5 9a.75.75 0 000 1.5H15A.75.75 0 0015 9h-1.5zm-.75 3.75a.75.75 0 01.75-.75H15a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM9 19.5v-2.25a.75.75 0 01.75-.75h4.5a.75.75 0 01.75.75v2.25a.75.75 0 01-.75.75h-4.5A.75.75 0 019 19.5z"
+              clip-rule="evenodd" />
+          </svg>
+
+        </cardAnimated>
+        <cardAnimated
+          title="Ubicaciones"
+          cuantity="10"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8c547" class="w-12 h-12">
+            <path fill-rule="evenodd"
+              d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+              clip-rule="evenodd" />
+          </svg>
+
+        </cardAnimated>
+      </div>
+    </div>
+  </section></template>

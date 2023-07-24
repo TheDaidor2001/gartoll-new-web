@@ -9,6 +9,9 @@ import { RouterLink } from 'vue-router';
         },
         position: {
             type: String
+        },
+        number: {
+            type: String,
         }
     })
 </script>
@@ -16,6 +19,9 @@ import { RouterLink } from 'vue-router';
 
 <template>
     <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg text-center" >
+        <div class="bg-secondary text-white text-xl font-black mb-3 w-10 h-10 flex items-center justify-center mx-auto rounded-full">
+            <span>{{ number }}</span>
+        </div>
         <RouterLink to="/">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{ title }}</h5>
         </RouterLink>
