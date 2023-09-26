@@ -275,7 +275,7 @@ import cardAnimated from '../components/UI/card-animated.vue';
       description="Las últimas noticias mas relevantes de nuestra empresa o del sector de la seguridad privada." />
     <div class="flex flex-col lg:flex-row my-20 gap-5 justify-center">
       <div class="w-3/4 lg:w-1/2 mx-auto flex flex-col justify-center">
-        <img src="/public/partido (1).jpeg" alt="" class="rounded-lg">
+        <img src="/partido (1).jpeg" alt="" class="rounded-lg">
         <h1 class="text-xl lg:text-3xl font-bold uppercase text-gray-900 mt-3">Clasificados primeros de grupo</h1>
         <p class="text-md lg:text-lg text-gray-800 font-thin mt-2">La empresa "Gartoll Seguridad Privada" clasifica como primera de grupo en el torneo de fútbol "Camp[...]</p>
         <p class="font-normal text-black mt-1">Publicado: 2023-02-27</p>
@@ -283,7 +283,7 @@ import cardAnimated from '../components/UI/card-animated.vue';
       </div>
       <div class="w-2/3 lg:px-0 lg:w-1/2 flex flex-col gap-5 mx-auto mt-5 lg:mt-0">
         <div class="flex flex-col lg:flex-row gap-3">
-          <img src="/public/partido (1).jpeg" alt="" class="rounded-lg w-full h-auto lg:w-64">
+          <img src="/partido (1).jpeg" alt="" class="rounded-lg w-full h-auto lg:w-64">
          <div>
             <h1 class="text-sm lg:text-xl uppercase font-bold text-gray-900">Clasificados primeros de grupo</h1>
             <p class="text-md font-light">La empresa "Gartoll Seguridad Privada" clasifica como primera de grupo en el torneo de fútbol "Camp[...]</p>
@@ -292,7 +292,7 @@ import cardAnimated from '../components/UI/card-animated.vue';
           </div>
         </div>
         <div class="flex flex-col lg:flex-row gap-3">
-          <img src="/public/partido (1).jpeg" alt="" class="rounded-lg w-full h-auto lg:w-64">
+          <img src="/partido (1).jpeg" alt="" class="rounded-lg w-full h-auto lg:w-64">
          <div>
             <h1 class="text-md lg:text-xl uppercase font-bold text-gray-900">Clasificados primeros de grupo</h1>
             <p class="text-md font-light">La empresa "Gartoll Seguridad Privada" clasifica como primera de grupo en el torneo de fútbol "Camp[...]</p>
@@ -301,7 +301,7 @@ import cardAnimated from '../components/UI/card-animated.vue';
           </div>
         </div>
         <div class="flex flex-col lg:flex-row gap-3">
-          <img src="/public/partido (1).jpeg" alt="" class="rounded-lg w-full h-auto lg:w-64">
+          <img src="/partido (1).jpeg" alt="" class="rounded-lg w-full h-auto lg:w-64">
          <div>
             <h1 class="text-md lg:text-xl uppercase font-bold text-gray-900">Clasificados primeros de grupo</h1>
             <p class="text-md font-light">La empresa "Gartoll Seguridad Privada" clasifica como primera de grupo en el torneo de fútbol "Camp[...]</p>
