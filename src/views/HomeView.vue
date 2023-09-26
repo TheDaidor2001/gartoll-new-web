@@ -210,7 +210,7 @@ import cardAnimated from '../components/UI/card-animated.vue';
     <headingText title="Contáctanos"
       description="Estamos deseando trabajar con usted y brindarle el mejor servicio de seguridad privada." />
     <iframe class="mt-10 w-full z-10" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7962.640018817794!2d8.729777301049795!3d3.7402832810288458!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10669ff467f7884b%3A0xd7c3938a528feec2!2sGartoll!5e0!3m2!1ses!2s!4v1695717247915!5m2!1ses!2s" height="600" style="border:0; z-index: 1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <div class=" absolute z-10 top-64 w-96 left-10 bg-secondary px-10 py-5 rounded-lg shadow-lg">
+    <div class=" absolute z-10 top-44 w-ful lg:w-96 left-10 bg-secondary px-10 py-5 rounded-lg shadow-lg">
       <FormKit
         type="form"
         :actions="false" 
@@ -273,9 +273,43 @@ import cardAnimated from '../components/UI/card-animated.vue';
   <section class="w-full max-w-7xl mx-auto mt-32">
     <headingText title="Últimas Noticias"
       description="Las últimas noticias mas relevantes de nuestra empresa o del sector de la seguridad privada." />
-    <div class="flex flex-col lg:flex-row">
-      <div></div>
-      <div></div>
+    <div class="flex flex-col lg:flex-row my-20 gap-5 justify-center">
+      <div class="w-3/4 lg:w-1/2 mx-auto flex flex-col justify-center">
+        <img src="/public/partido (1).jpeg" alt="" class="rounded-lg">
+        <h1 class="text-xl lg:text-3xl font-bold uppercase text-gray-900 mt-3">Clasificados primeros de grupo</h1>
+        <p class="text-md lg:text-lg text-gray-800 font-thin mt-2">La empresa "Gartoll Seguridad Privada" clasifica como primera de grupo en el torneo de fútbol "Camp[...]</p>
+        <p class="font-normal text-black mt-1">Publicado: 2023-02-27</p>
+        <RouterLink to="/home" class="text-center text-sm lg:text-md font-normal block bg-secondary mt-2 text-white px-5 py-2 rounded-lg hover:bg-amber-300 transition-colors lg:w-1/3 w-2/3 shadow-md">Saber más</RouterLink>
+      </div>
+      <div class="w-2/3 lg:px-0 lg:w-1/2 flex flex-col gap-5 mx-auto mt-5 lg:mt-0">
+        <div class="flex flex-col lg:flex-row gap-3">
+          <img src="/public/partido (1).jpeg" alt="" class="rounded-lg w-full h-auto lg:w-64">
+         <div>
+            <h1 class="text-sm lg:text-xl uppercase font-bold text-gray-900">Clasificados primeros de grupo</h1>
+            <p class="text-md font-light">La empresa "Gartoll Seguridad Privada" clasifica como primera de grupo en el torneo de fútbol "Camp[...]</p>
+            <p class="font-normal text-black mt-1">Publicado: 2023-02-27</p>
+            <RouterLink to="/home" class="text-center text-md font-normal block bg-secondary mt-2 text-white px-5 py-2 rounded-lg hover:bg-amber-300 transition-colors w-full lg:w-1/3 shadow-md mx-auto lg:mx-0">Saber más</RouterLink>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-3">
+          <img src="/public/partido (1).jpeg" alt="" class="rounded-lg w-full h-auto lg:w-64">
+         <div>
+            <h1 class="text-md lg:text-xl uppercase font-bold text-gray-900">Clasificados primeros de grupo</h1>
+            <p class="text-md font-light">La empresa "Gartoll Seguridad Privada" clasifica como primera de grupo en el torneo de fútbol "Camp[...]</p>
+            <p class="font-normal text-black mt-1">Publicado: 2023-02-27</p>
+            <RouterLink to="/home" class="text-center text-md font-normal block bg-secondary mt-2 text-white px-5 py-2 rounded-lg hover:bg-amber-300 transition-colors w-full lg:w-1/3 shadow-md mx-auto lg:mx-0">Saber más</RouterLink>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-3">
+          <img src="/public/partido (1).jpeg" alt="" class="rounded-lg w-full h-auto lg:w-64">
+         <div>
+            <h1 class="text-md lg:text-xl uppercase font-bold text-gray-900">Clasificados primeros de grupo</h1>
+            <p class="text-md font-light">La empresa "Gartoll Seguridad Privada" clasifica como primera de grupo en el torneo de fútbol "Camp[...]</p>
+            <p class="font-normal text-black mt-1">Publicado: 2023-02-27</p>
+            <RouterLink to="/home" class="text-center text-md font-normal block bg-secondary mt-2 text-white px-5 py-2 rounded-lg hover:bg-amber-300 transition-colors w-full lg:w-1/3 shadow-md mx-auto lg:mx-0">Saber más</RouterLink>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
