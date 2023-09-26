@@ -205,4 +205,77 @@ import cardAnimated from '../components/UI/card-animated.vue';
         </cardAnimated>
       </div>
     </div>
-  </section></template>
+  </section>
+  <section class="w-full max-w-7xl mx-auto mt-10 relative">
+    <headingText title="Contáctanos"
+      description="Estamos deseando trabajar con usted y brindarle el mejor servicio de seguridad privada." />
+    <iframe class="mt-10 w-full z-10" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7962.640018817794!2d8.729777301049795!3d3.7402832810288458!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10669ff467f7884b%3A0xd7c3938a528feec2!2sGartoll!5e0!3m2!1ses!2s!4v1695717247915!5m2!1ses!2s" height="600" style="border:0; z-index: 1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class=" absolute z-10 top-64 w-96 left-10 bg-secondary px-10 py-5 rounded-lg shadow-lg">
+      <FormKit
+        type="form"
+        :actions="false" 
+        :incomplete-message="false"
+      >
+        <FormKit 
+          type="text" 
+          label="Nombre o Empresa" 
+          name="name" 
+          placeholder="Ej: Juan Ondo  o Martínez Hmnos" 
+          validation="required"
+          :validation-messages="{
+            required: 'El nombre o empresa es obligatorio',
+          }" 
+        />
+        <FormKit 
+          type="tel" 
+          label="Teléfono" 
+          name="phone" 
+          placeholder="xxx-xxx-xxx"
+          validation="required|number"
+          :validation-messages="{
+            required: 'El teléfono es obligatorio',
+            number: 'Solo se admiten números'
+          }"
+           validation-visibility="dirty"
+        />
+        <FormKit 
+          type="email" 
+          label="Email" 
+          name="email" 
+          placeholder="Ingresa tu Email" 
+          validation="required|email"
+          :validation-messages="{
+            required: 'El email es obligatorio',
+            email: 'Debe ser un email válido'
+          }" 
+        />
+        <FormKit
+          type="select"
+          label="¿Qué servicio quiere solicitar?"
+          name="services"
+          :options="[
+            'Vigilancia',
+            'Guarda Espaldas',
+            'Cámaras y Alarmas',
+            'Transporte de dinero',
+          ]"
+          validation="required"
+          :validation-messages="{
+            required: 'El servicio es obligatorio'
+          }"
+        />
+        <FormKit type="submit">
+            Enviar
+        </FormKit>
+      </FormKit>
+    </div>
+  </section>
+  <section class="w-full max-w-7xl mx-auto mt-32">
+    <headingText title="Últimas Noticias"
+      description="Las últimas noticias mas relevantes de nuestra empresa o del sector de la seguridad privada." />
+    <div class="flex flex-col lg:flex-row">
+      <div></div>
+      <div></div>
+    </div>
+  </section>
+</template>

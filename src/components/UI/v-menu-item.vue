@@ -12,7 +12,7 @@ const toggleMenu = () => {
 </script>
 
 <template>
-    <header class="bg-gray-950 z-10 sticky top-0">
+    <header class="bg-gray-950 z-20 sticky top-0">
         <nav class="max-w-screen-2xl mx-auto flex p-5 justify-between items-center">
             <img class="w-10 h-10" src="/logo.webp" alt="logo Gartoll Seguridad Privada">
             <div>
