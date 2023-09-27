@@ -1,10 +1,21 @@
 <script setup>
+import { onMounted } from 'vue';
+import { useNoticiasStore } from '../stores/noticiasStore'
 import vMenu from '../components/UI/v-menu-item.vue'
 import cardInfo from '../components/UI/card-info.vue';
 import cardDiferences from '../components/UI/card-diferences.vue';
 import headingText from '../components/UI/heading-text.vue';
 import cardServices from '../components/UI/card-services.vue';
 import cardAnimated from '../components/UI/card-animated.vue';
+
+
+const date = new Date
+const noticiasStore = useNoticiasStore()
+
+onMounted(() => {
+  noticiasStore.getNoticias()
+  console.log(noticiasStore?.noticiasCortadas);
+})
 
 </script>
 
@@ -13,7 +24,7 @@ import cardAnimated from '../components/UI/card-animated.vue';
   <section class="pt-20 pb-20 xl:pb-0 overflow-hidden h-auto bg-hero-section bg-cover">
     <div class="flex flex-col lg:flex-row gap-5 items-center justify-center max-w-7xl mx-auto">
       <div class="w-full xl:w-1/2">
-        <h1 class="text-6xl lg:text-8xl text-center font-black  text-gray-900 uppercase">Gartoll</h1>
+        <h1 class="text-6xl lg:text-8xl text-center font-black  text-gray-900 uppercase animate-fade-down">Gartoll</h1>
         <h2 class="text-center text-gray-800 text-4xl lg:text-6xl font-semibold uppercase">Seguridad Privada</h2>
         <div class="w-full xl:w-2/3 mx-auto">
           <p class="mt-5 text-center text-lg mx-auto text-gray-700 px-10 lg:px-0">Nuestro equipo de seguridad privada está
@@ -64,7 +75,7 @@ import cardAnimated from '../components/UI/card-animated.vue';
   <section
     class="py-10 px-10 lg:px-0 mx-auto container flex flex-col-reverse lg:flex-row justify-center items-center gap-10 text-center lg:text-left">
     <div class="flex flex-col gap-5 w-full lg:w-1/3">
-      <h3 class="text-4xl lg:text-5xl font-normal text-gray-600">Tu empresa de <span class="font-black">Seguridad
+      <h3 class="text-4xl lg:text-5xl font-normal text-gray-800">Tu empresa de <span class="font-black">Seguridad
           Privada</span></h3>
       <p class="text-gray-600 font-light text-md">Con más de una década de experiencia en el sector nos enorgullecemos de
         ser una opción de seguridad privada confiable y dedicada.</p>
@@ -270,40 +281,22 @@ import cardAnimated from '../components/UI/card-animated.vue';
       </FormKit>
     </div>
   </section>
-  <section class="w-full max-w-7xl mx-auto mt-32">
+  <section class="w-full max-w-7xl mx-auto mt-32 px-10 lg:px-0">
     <headingText title="Últimas Noticias"
       description="Las últimas noticias mas relevantes de nuestra empresa o del sector de la seguridad privada." />
     <div class="flex flex-col lg:flex-row my-20 gap-5 justify-center">
-      <div class="w-3/4 lg:w-1/2 mx-auto flex flex-col justify-center">
-        <img src="/partido (1).jpeg" alt="" class="rounded-lg">
-        <h1 class="text-xl lg:text-3xl font-bold uppercase text-gray-900 mt-3">Clasificados primeros de grupo</h1>
+      <div class="w-1/2 mx-auto flex flex-col justify-center">
+        <img :src="noticiasStore.noticiasIndex[0]?.imagen" alt="" class="rounded-lg">
+        <h1 class="text-xl lg:text-3xl font-bold uppercase text-gray-900 mt-3">{{ noticiasStore?.noticiasIndex[0]?.titulo }}</h1>
         <p class="text-md lg:text-lg text-gray-800 font-thin mt-2">La empresa "Gartoll Seguridad Privada" clasifica como primera de grupo en el torneo de fútbol "Camp[...]</p>
         <p class="font-normal text-black mt-1">Publicado: 2023-02-27</p>
         <RouterLink to="/home" class="text-center text-sm lg:text-md font-normal block bg-secondary mt-2 text-white px-5 py-2 rounded-lg hover:bg-amber-300 transition-colors lg:w-1/3 w-2/3 shadow-md">Saber más</RouterLink>
       </div>
-      <div class="w-2/3 lg:px-0 lg:w-1/2 flex flex-col gap-5 mx-auto mt-5 lg:mt-0">
-        <div class="flex flex-col lg:flex-row gap-3">
-          <img src="/partido (1).jpeg" alt="" class="rounded-lg w-full h-auto lg:w-64">
-         <div>
-            <h1 class="text-sm lg:text-xl uppercase font-bold text-gray-900">Clasificados primeros de grupo</h1>
-            <p class="text-md font-light">La empresa "Gartoll Seguridad Privada" clasifica como primera de grupo en el torneo de fútbol "Camp[...]</p>
-            <p class="font-normal text-black mt-1">Publicado: 2023-02-27</p>
-            <RouterLink to="/home" class="text-center text-md font-normal block bg-secondary mt-2 text-white px-5 py-2 rounded-lg hover:bg-amber-300 transition-colors w-full lg:w-1/3 shadow-md mx-auto lg:mx-0">Saber más</RouterLink>
-          </div>
-        </div>
-        <div class="flex flex-col lg:flex-row gap-3">
-          <img src="/partido (1).jpeg" alt="" class="rounded-lg w-full h-auto lg:w-64">
-         <div>
-            <h1 class="text-md lg:text-xl uppercase font-bold text-gray-900">Clasificados primeros de grupo</h1>
-            <p class="text-md font-light">La empresa "Gartoll Seguridad Privada" clasifica como primera de grupo en el torneo de fútbol "Camp[...]</p>
-            <p class="font-normal text-black mt-1">Publicado: 2023-02-27</p>
-            <RouterLink to="/home" class="text-center text-md font-normal block bg-secondary mt-2 text-white px-5 py-2 rounded-lg hover:bg-amber-300 transition-colors w-full lg:w-1/3 shadow-md mx-auto lg:mx-0">Saber más</RouterLink>
-          </div>
-        </div>
-        <div class="flex flex-col lg:flex-row gap-3">
-          <img src="/partido (1).jpeg" alt="" class="rounded-lg w-full h-auto lg:w-64">
-         <div>
-            <h1 class="text-md lg:text-xl uppercase font-bold text-gray-900">Clasificados primeros de grupo</h1>
+      <div class=" w-1/2 flex flex-col gap-4">
+        <div class="flex flex-col lg:flex-row gap-3" v-for="noticia in noticiasStore.noticiasCortadas" :key="noticia.id">
+          <img :src="noticia.imagen" :alt="noticia.alt" class="rounded-lg w-28 h-auto lg:w-52">
+          <div>
+            <h1 class="text-sm lg:text-xl uppercase font-bold text-gray-900">{{ noticia.titulo }}</h1>
             <p class="text-md font-light">La empresa "Gartoll Seguridad Privada" clasifica como primera de grupo en el torneo de fútbol "Camp[...]</p>
             <p class="font-normal text-black mt-1">Publicado: 2023-02-27</p>
             <RouterLink to="/home" class="text-center text-md font-normal block bg-secondary mt-2 text-white px-5 py-2 rounded-lg hover:bg-amber-300 transition-colors w-full lg:w-1/3 shadow-md mx-auto lg:mx-0">Saber más</RouterLink>
@@ -312,4 +305,10 @@ import cardAnimated from '../components/UI/card-animated.vue';
       </div>
     </div>
   </section>
+  <footer class="text-center text-lg bg-secondary text-gray-50 py-5 flex justify-center gap-3 items-center">
+    <RouterLink :to="{name: 'inicio'}">
+      <img class="w-10 h-10 " src="/logo.webp" alt="">
+    </RouterLink>
+    <h3>&copy;Gartol Seguridad Privada {{ date.getFullYear() }}</h3>
+  </footer>
 </template>

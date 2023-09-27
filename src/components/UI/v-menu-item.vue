@@ -23,7 +23,7 @@ const toggleMenu = () => {
                     <vCross />
                 </button>
                 <ul v-if="active"
-                    class="bg-gray-950 w-full text-center absolute top-20 left-0 h-56 transition-all flex flex-col gap-2 lg:hidden text-white">
+                    class="bg-gray-950 w-full text-center absolute top-20 left-0 h-56 transition-all flex flex-col gap-2 lg:hidden text-white animate-fade-down animate-duration-500">
                     <RouterLink active-class="text-secondary" :to="{ name: 'inicio' }" class="hover:text-secondary font-bold text-md transition-colors">Inicio
                     </RouterLink>
                     <RouterLink :to="{name: 'servicios'}" active-class="text-secondary" class="hover:text-secondary font-bold text-md transition-colors">Servicios</RouterLink>
