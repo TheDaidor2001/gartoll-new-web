@@ -250,28 +250,25 @@ onMounted(() => {
     <headingText title="Últimas Noticias"
       description="Las últimas noticias mas relevantes de nuestra empresa o del sector de la seguridad privada." />
     <div class="flex flex-col lg:flex-row my-20 gap-5 justify-center">
-      <div class="w-1/2 mx-auto flex flex-col justify-center">
-        <img :src="noticiasStore.noticiasIndex[0]?.imagen" alt="" class="rounded-lg">
+      <div class="w-full lg:w-1/2 mx-auto flex flex-col justify-center">
+        <img :src="noticiasStore.noticiasIndex[0]?.imagen" :alt="noticiasStore.noticiasIndex[0]?.alt" class="rounded-lg w-full">
         <h1 class="text-xl lg:text-3xl font-bold uppercase text-gray-900 mt-3">{{ noticiasStore?.noticiasIndex[0]?.titulo
         }}</h1>
-        <p class="text-md lg:text-lg text-gray-800 font-thin mt-2">La empresa "Gartoll Seguridad Privada" clasifica como
-          primera de grupo en el torneo de fútbol "Camp[...]</p>
-        <p class="font-normal text-black mt-1">Publicado: 2023-02-27</p>
+        <p class="text-md lg:text-lg text-gray-800 font-thin mt-2 truncate overflow-hidden">{{ noticiasStore?.noticiasIndex[0]?.contenido }}</p>
+        <p class="font-normal text-black mt-1">Publicado: {{ formatDate(noticiasStore?.noticiasIndex[0]?.fecha.toDate()) }}</p>
         <RouterLink to="/home"
           class="text-center text-sm lg:text-md font-normal block bg-secondary mt-2 text-white px-5 py-2 rounded-lg hover:bg-amber-300 transition-colors lg:w-1/3 w-2/3 shadow-md">
           Saber más</RouterLink>
       </div>
-      <div class=" w-1/2 flex flex-col gap-4">
+      <div class=" lg:w-1/2 w-full flex flex-col gap-4">
         <div class="flex flex-col lg:flex-row gap-3" v-for="noticia in noticiasStore.noticiasCortadas" :key="noticia.id">
-          <img :src="noticia.imagen" :alt="noticia.alt" class="rounded-lg w-28 h-auto lg:w-52">
+          <img :src="noticia.imagen" :alt="noticia.alt" class="rounded-lg h-40 object-cover w-full lg:w-52">
           <div>
             <h1 class="text-sm lg:text-xl uppercase font-bold text-gray-900">{{ noticia.titulo }}</h1>
             <p></p>
-            <p class="text-md font-light">La empresa "Gartoll Seguridad Privada" clasifica como primera de grupo en el
-              torneo de fútbol "Camp[...]</p>
-            <p class="font-normal text-black mt-1">Publicado: {{ formatDate(noticia.fecha) }}</p>
+            <p class="font-normal text-black mt-1">Publicado: {{ formatDate(noticia.fecha.toDate()) }}</p>
             <RouterLink :to="{name: 'noticia', params: {id: noticia.id}}"
-              class="text-center text-md font-normal block bg-secondary mt-2 text-white px-5 py-2 rounded-lg hover:bg-amber-300 transition-colors w-full lg:w-1/3 shadow-md mx-auto lg:mx-0">
+              class="text-center text-md font-normal block bg-secondary mt-2 text-white px-5 py-2 rounded-lg hover:bg-amber-300 transition-colors w-40 shadow-md mx-auto lg:mx-0">
               Saber más</RouterLink>
           </div>
         </div>

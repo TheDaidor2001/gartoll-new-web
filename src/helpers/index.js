@@ -1,11 +1,14 @@
-
+import { toDate } from 'date-fns'
 
 function formatDate (date) {
+   const newDate = toDate(date)
+   const options = {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+   }
 
-    let newDate = new Date(date).getDate()
-
-
-    return newDate
+   return newDate.toLocaleDateString('es-ES', options)
 }
 
 
