@@ -37,7 +37,7 @@ const toggleMenu = () => {
                     </RouterLink>
                     <RouterLink :to="{name: 'servicios'}" active-class="text-secondary" class="hover:text-secondary font-bold text-sm transition-colors">Servicios</RouterLink>
                     <li class="text-white">Información</li>
-                    <li class="text-white">Noticias</li>
+                    <RouterLink :to="{name: 'noticias'}" active-class="text-secondary" class="hover:text-secondary font-bold text-sm transition-colors">Noticias</RouterLink>
                     <button
                         class="border-2 border-secondary text-secondary rounded-3xl px-3 py-1 block w-1/2 mx-auto hover:bg-secondary hover:text-white font-bold transition-colors">Contáctanos</button>
                 </ul>

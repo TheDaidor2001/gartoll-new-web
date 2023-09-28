@@ -2,19 +2,20 @@
 import { onMounted } from 'vue';
 import { useNoticiasStore } from '../stores/noticiasStore'
 import vMenu from '../components/UI/v-menu-item.vue'
+import vFooterVue from '../components/UI/v-footer.vue';
 import cardInfo from '../components/UI/card-info.vue';
 import cardDiferences from '../components/UI/card-diferences.vue';
 import headingText from '../components/UI/heading-text.vue';
 import cardServices from '../components/UI/card-services.vue';
 import cardAnimated from '../components/UI/card-animated.vue';
 
+import {formatDate} from '../helpers'
 
-const date = new Date
+
 const noticiasStore = useNoticiasStore()
 
 onMounted(() => {
   noticiasStore.getNoticias()
-  console.log(noticiasStore?.noticiasCortadas);
 })
 
 </script>
@@ -164,14 +165,14 @@ onMounted(() => {
   <section class="w-full max-w-7xl mx-auto">
     <div class="py-10 grid grid-cols-1 xl:grid-cols-2 gap-5">
       <div class="text-center xl:text-left flex flex-col justify-center  px-20 xl:px-0">
-        <h3 class="text-3xl xl:text-4xl font-black text-gray-800 uppercase mb-5">Contamos con una amplia experiencia profesional</h3>
-        <p class="font-light text-gray-600 text-md xl:text-lg">Con una amplia experiencia a nivel nacional y ubicaciones estratégicas en todo el país, trabajamos estrechamente con numerosas empresas y clientes para brindar servicios personalizados y de alta calidad.</p>
+        <h3 class="text-3xl xl:text-4xl font-black text-gray-800 uppercase mb-5">Contamos con una amplia experiencia
+          profesional</h3>
+        <p class="font-light text-gray-600 text-md xl:text-lg">Con una amplia experiencia a nivel nacional y ubicaciones
+          estratégicas en todo el país, trabajamos estrechamente con numerosas empresas y clientes para brindar servicios
+          personalizados y de alta calidad.</p>
       </div>
       <div class="bg-secondary rounded-xl p-10 grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <cardAnimated
-          title="Clientes"
-          cuantity="300"
-        >
+        <cardAnimated title="Clientes" cuantity="300">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8c547" class="w-12 h-12">
             <path fill-rule="evenodd"
               d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
@@ -179,10 +180,7 @@ onMounted(() => {
           </svg>
 
         </cardAnimated>
-        <cardAnimated
-          title="Trabajadores"
-          cuantity="1300"
-        >
+        <cardAnimated title="Trabajadores" cuantity="1300">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8c547" class="w-12 h-12">
             <path fill-rule="evenodd"
               d="M7.5 5.25a3 3 0 013-3h3a3 3 0 013 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0112 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 017.5 5.455V5.25zm7.5 0v.09a49.488 49.488 0 00-6 0v-.09a1.5 1.5 0 011.5-1.5h3a1.5 1.5 0 011.5 1.5zm-3 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z"
@@ -192,10 +190,7 @@ onMounted(() => {
           </svg>
 
         </cardAnimated>
-        <cardAnimated
-          title="Empresas"
-          cuantity="100"
-        >
+        <cardAnimated title="Empresas" cuantity="100">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8c547" class="w-12 h-12">
             <path fill-rule="evenodd"
               d="M4.5 2.25a.75.75 0 000 1.5v16.5h-.75a.75.75 0 000 1.5h16.5a.75.75 0 000-1.5h-.75V3.75a.75.75 0 000-1.5h-15zM9 6a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H9zm-.75 3.75A.75.75 0 019 9h1.5a.75.75 0 010 1.5H9a.75.75 0 01-.75-.75zM9 12a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H9zm3.75-5.25A.75.75 0 0113.5 6H15a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM13.5 9a.75.75 0 000 1.5H15A.75.75 0 0015 9h-1.5zm-.75 3.75a.75.75 0 01.75-.75H15a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM9 19.5v-2.25a.75.75 0 01.75-.75h4.5a.75.75 0 01.75.75v2.25a.75.75 0 01-.75.75h-4.5A.75.75 0 019 19.5z"
@@ -203,10 +198,7 @@ onMounted(() => {
           </svg>
 
         </cardAnimated>
-        <cardAnimated
-          title="Ubicaciones"
-          cuantity="10"
-        >
+        <cardAnimated title="Ubicaciones" cuantity="10">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e8c547" class="w-12 h-12">
             <path fill-rule="evenodd"
               d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
@@ -220,63 +212,36 @@ onMounted(() => {
   <section class="w-full max-w-7xl mx-auto mt-10 relative">
     <headingText title="Contáctanos"
       description="Estamos deseando trabajar con usted y brindarle el mejor servicio de seguridad privada." />
-    <iframe class="mt-10 w-full z-10" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7962.640018817794!2d8.729777301049795!3d3.7402832810288458!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10669ff467f7884b%3A0xd7c3938a528feec2!2sGartoll!5e0!3m2!1ses!2s!4v1695717247915!5m2!1ses!2s" height="600" style="border:0; z-index: 1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe class="mt-10 w-full z-10"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7962.640018817794!2d8.729777301049795!3d3.7402832810288458!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10669ff467f7884b%3A0xd7c3938a528feec2!2sGartoll!5e0!3m2!1ses!2s!4v1695717247915!5m2!1ses!2s"
+      height="600" style="border:0; z-index: 1;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
     <div class=" absolute z-10 top-44 w-ful lg:w-96 left-10 bg-secondary px-10 py-5 rounded-lg shadow-lg">
-      <FormKit
-        type="form"
-        :actions="false" 
-        :incomplete-message="false"
-      >
-        <FormKit 
-          type="text" 
-          label="Nombre o Empresa" 
-          name="name" 
-          placeholder="Ej: Juan Ondo  o Martínez Hmnos" 
-          validation="required"
-          :validation-messages="{
+      <FormKit type="form" :actions="false" :incomplete-message="false">
+        <FormKit type="text" label="Nombre o Empresa" name="name" placeholder="Ej: Juan Ondo  o Martínez Hmnos"
+          validation="required" :validation-messages="{
             required: 'El nombre o empresa es obligatorio',
-          }" 
-        />
-        <FormKit 
-          type="tel" 
-          label="Teléfono" 
-          name="phone" 
-          placeholder="xxx-xxx-xxx"
-          validation="required|number"
+          }" />
+        <FormKit type="tel" label="Teléfono" name="phone" placeholder="xxx-xxx-xxx" validation="required|number"
           :validation-messages="{
             required: 'El teléfono es obligatorio',
             number: 'Solo se admiten números'
-          }"
-           validation-visibility="dirty"
-        />
-        <FormKit 
-          type="email" 
-          label="Email" 
-          name="email" 
-          placeholder="Ingresa tu Email" 
-          validation="required|email"
+          }" validation-visibility="dirty" />
+        <FormKit type="email" label="Email" name="email" placeholder="Ingresa tu Email" validation="required|email"
           :validation-messages="{
             required: 'El email es obligatorio',
             email: 'Debe ser un email válido'
-          }" 
-        />
-        <FormKit
-          type="select"
-          label="¿Qué servicio quiere solicitar?"
-          name="services"
-          :options="[
-            'Vigilancia',
-            'Guarda Espaldas',
-            'Cámaras y Alarmas',
-            'Transporte de dinero',
-          ]"
-          validation="required"
-          :validation-messages="{
-            required: 'El servicio es obligatorio'
-          }"
-        />
+          }" />
+        <FormKit type="select" label="¿Qué servicio quiere solicitar?" name="services" :options="[
+          'Vigilancia',
+          'Guarda Espaldas',
+          'Cámaras y Alarmas',
+          'Transporte de dinero',
+        ]" validation="required" :validation-messages="{
+  required: 'El servicio es obligatorio'
+}" />
         <FormKit type="submit">
-            Enviar
+          Enviar
         </FormKit>
       </FormKit>
     </div>
@@ -287,28 +252,33 @@ onMounted(() => {
     <div class="flex flex-col lg:flex-row my-20 gap-5 justify-center">
       <div class="w-1/2 mx-auto flex flex-col justify-center">
         <img :src="noticiasStore.noticiasIndex[0]?.imagen" alt="" class="rounded-lg">
-        <h1 class="text-xl lg:text-3xl font-bold uppercase text-gray-900 mt-3">{{ noticiasStore?.noticiasIndex[0]?.titulo }}</h1>
-        <p class="text-md lg:text-lg text-gray-800 font-thin mt-2">La empresa "Gartoll Seguridad Privada" clasifica como primera de grupo en el torneo de fútbol "Camp[...]</p>
+        <h1 class="text-xl lg:text-3xl font-bold uppercase text-gray-900 mt-3">{{ noticiasStore?.noticiasIndex[0]?.titulo
+        }}</h1>
+        <p class="text-md lg:text-lg text-gray-800 font-thin mt-2">La empresa "Gartoll Seguridad Privada" clasifica como
+          primera de grupo en el torneo de fútbol "Camp[...]</p>
         <p class="font-normal text-black mt-1">Publicado: 2023-02-27</p>
-        <RouterLink to="/home" class="text-center text-sm lg:text-md font-normal block bg-secondary mt-2 text-white px-5 py-2 rounded-lg hover:bg-amber-300 transition-colors lg:w-1/3 w-2/3 shadow-md">Saber más</RouterLink>
+        <RouterLink to="/home"
+          class="text-center text-sm lg:text-md font-normal block bg-secondary mt-2 text-white px-5 py-2 rounded-lg hover:bg-amber-300 transition-colors lg:w-1/3 w-2/3 shadow-md">
+          Saber más</RouterLink>
       </div>
       <div class=" w-1/2 flex flex-col gap-4">
         <div class="flex flex-col lg:flex-row gap-3" v-for="noticia in noticiasStore.noticiasCortadas" :key="noticia.id">
           <img :src="noticia.imagen" :alt="noticia.alt" class="rounded-lg w-28 h-auto lg:w-52">
           <div>
             <h1 class="text-sm lg:text-xl uppercase font-bold text-gray-900">{{ noticia.titulo }}</h1>
-            <p class="text-md font-light">La empresa "Gartoll Seguridad Privada" clasifica como primera de grupo en el torneo de fútbol "Camp[...]</p>
-            <p class="font-normal text-black mt-1">Publicado: 2023-02-27</p>
-            <RouterLink to="/home" class="text-center text-md font-normal block bg-secondary mt-2 text-white px-5 py-2 rounded-lg hover:bg-amber-300 transition-colors w-full lg:w-1/3 shadow-md mx-auto lg:mx-0">Saber más</RouterLink>
+            <p></p>
+            <p class="text-md font-light">La empresa "Gartoll Seguridad Privada" clasifica como primera de grupo en el
+              torneo de fútbol "Camp[...]</p>
+            <p class="font-normal text-black mt-1">Publicado: {{ formatDate(noticia.fecha) }}</p>
+            <RouterLink :to="{name: 'noticia', params: {id: noticia.id}}"
+              class="text-center text-md font-normal block bg-secondary mt-2 text-white px-5 py-2 rounded-lg hover:bg-amber-300 transition-colors w-full lg:w-1/3 shadow-md mx-auto lg:mx-0">
+              Saber más</RouterLink>
           </div>
         </div>
+
       </div>
+
     </div>
   </section>
-  <footer class="text-center text-lg bg-secondary text-gray-50 py-5 flex justify-center gap-3 items-center">
-    <RouterLink :to="{name: 'inicio'}">
-      <img class="w-10 h-10 " src="/logo.webp" alt="">
-    </RouterLink>
-    <h3>&copy;Gartol Seguridad Privada {{ date.getFullYear() }}</h3>
-  </footer>
+  <vFooterVue />
 </template>

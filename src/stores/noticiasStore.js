@@ -8,16 +8,22 @@ import { computed, ref } from 'vue'
 export const useNoticiasStore = defineStore('noticias', () => {
 
     const noticiasIndex = ref([])
+    const loading = ref(false)
     const noticiasRef = collection(db, "noticias");
 
     async function getNoticias() {
+        loading.value = true
+       try {
         const q = query(noticiasRef, orderBy("fecha", "desc"));
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            noticiasIndex.value.push(doc.data())
+            noticiasIndex.value.push({...doc.data(), id: doc.id})
         });
-        console.log(noticiasIndex.value)
+       } catch (error) {
+        console.log(error)
+       }finally {
+        loading.value = false;
+       }
     }
 
     const noticiasCortadas = computed(() => {
@@ -25,10 +31,17 @@ export const useNoticiasStore = defineStore('noticias', () => {
         return filteredArrayNoticias
     })
 
+    const deleteLatestNew = computed(()=> {
+       const newArray = noticiasIndex.value.slice(1)
+       return newArray
+    })
+
 
     return {
         noticiasIndex,
+        loading,
         getNoticias,
-        noticiasCortadas
+        noticiasCortadas,
+        deleteLatestNew
     }
 })  
