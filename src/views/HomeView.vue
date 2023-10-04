@@ -144,19 +144,19 @@ onMounted(() => {
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10 items-center">
         <div class="flex flex-col gap-5 items-center">
           <cardServices title="Vigilancia" description="Tenemos sistemas de vigilancia para empresas, casas particulares y también
-            para los eventos." position="text-end" number="1" />
+            para los eventos." position="text-end" number="1" to="/servicios"/>
           <cardServices title="Guarda Espaldas"
             description="Tenemos personal muy competente para escoltar y proteger a cualquiera que solicite este servicio."
-            position="text-end" number="2" />
+            position="text-end" number="2" to="/servicios#vigilancia"/>
         </div>
         <img class="w-64 mx-auto hidden lg:block" src="/security.png" alt="">
         <div class="flex flex-col gap-5 items-center">
           <cardServices title="Cámaras y alarmas"
             description="Disponemos de cámaras de seguridad y alarmas de alta calidad para poder localizar a los intrusos."
-            position="text-start" number="3" />
+            position="text-start" number="3" to="/servicios"/>
           <cardServices title="Transporte de dinero"
             description="Tenemos camiones blindados muy seguros para asegurar los transportes del dinero en cualquier parte del pais."
-            position="text-start" number="4" />
+            position="text-start" number="4" to="/servicios" />
         </div>
       </div>
     </div>
@@ -256,7 +256,7 @@ onMounted(() => {
         }}</h1>
         <p class="text-md lg:text-lg text-gray-800 font-thin mt-2 truncate overflow-hidden">{{ noticiasStore?.noticiasIndex[0]?.contenido }}</p>
         <p class="font-normal text-black mt-1">Publicado: {{ formatDate(noticiasStore?.noticiasIndex[0]?.fecha.toDate()) }}</p>
-        <RouterLink to="/home"
+        <RouterLink :to="`/noticias/${noticiasStore?.noticiasIndex[0]?.id}`"
           class="text-center text-sm lg:text-md font-normal block bg-secondary mt-2 text-white px-5 py-2 rounded-lg hover:bg-amber-300 transition-colors lg:w-1/3 w-2/3 shadow-md">
           Saber más</RouterLink>
       </div>

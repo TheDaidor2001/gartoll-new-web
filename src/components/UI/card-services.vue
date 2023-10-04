@@ -12,6 +12,9 @@ import { RouterLink } from 'vue-router';
         },
         number: {
             type: String,
+        },
+        to: {
+            type: String
         }
     })
 </script>
@@ -22,11 +25,11 @@ import { RouterLink } from 'vue-router';
         <div class="bg-secondary text-white text-xl font-black mb-3 w-10 h-10 flex items-center justify-center mx-auto rounded-full">
             <span>{{ number }}</span>
         </div>
-        <RouterLink to="/">
+        <RouterLink :to="to">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{ title }}</h5>
         </RouterLink>
         <p class="mb-3 font-light text-md text-gray-700">{{ description }}</p>
-        <RouterLink to="/"
+        <RouterLink :to="to"
             class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-secondary rounded-lg">
             Saber más
             <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
