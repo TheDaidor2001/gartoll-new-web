@@ -13,18 +13,16 @@ import vFooter from '../components/UI/v-footer.vue';
         </div>
     </section>
 
-    <section class="w-full max-w-7xl mx-auto px-5 lg:px-10 flex flex-col lg:flex-row mb-14" id="camaras">
+    <section class="w-full max-w-7xl mx-auto px-5 lg:px-10 flex flex-col lg:flex-row mb-14 items-center" id="camaras">
         <img class="object-cover w-full lg:w-1/2 h-96 rounded-lg" src="/camara.webp" alt="https://www.freepik.es/foto-gratis/primer-plano-camara-cctv-pared_19138655.htm#query=security%20cameras&position=8&from_view=search&track=ais">
 
         <div class="px-5 lg:px-10 py-5 w-full lg:w-1/2">
             <h2 class="text-3xl lg:text-4xl uppercase font-extrabold text-gray-800">Cámaras y Alarmas</h2>
             <h3 class="text-gray-700 text-lg font-bold" >Expertos en instalación y mantenimiento</h3>
             <p class="mt-3 text-md font-normal text-gray-700">En Gartoll disponemos de cámaras de vigilancia y alarmas de alta seguridad incorporando lo último en avances tecnológicos. Una apuesta por la tecnología y la innovación en Seguridad Privada.</p>
-            <p class="mt-2 text-md font-normal text-gray-700">El equipo está formado por por expertos cualificados en la instalacion y mantenimineto tanto de cámaras de seguridad como de alarmas.Trabajamos de una manera ordenada y satisfactoria para el beneficio de nuestros clientes.</p>
-            <button class="bg-secondary px-10 py-1 mt-5 rounded-lg text-white font-bold text-xl">Solicitar</button>
-        </div>
+            <p class="mt-2 text-md font-normal text-gray-700">El equipo está formado por por expertos cualificados en la instalacion y mantenimineto tanto de cámaras de seguridad como de alarmas.Trabajamos de una manera ordenada y satisfactoria para el beneficio de nuestros clientes.</p>        </div>
     </section>
-    <section class="w-full max-w-7xl mx-auto px-5 lg:px-10 flex flex-col-reverse lg:flex-row mb-20" id="guarda-espaldas">
+    <section class="w-full max-w-7xl mx-auto px-5 lg:px-10 flex flex-col-reverse lg:flex-row mb-20 items-center" id="guarda-espaldas">
         <div class="px-5 lg:px-10 py-5 w-full lg:w-1/2">
             <h2 class="text-3xl lg:text-4xl uppercase font-extrabold text-gray-800">Guarda Espaldas</h2>
             <h3 class="text-gray-700 text-lg font-bold" >Trabajadores instruidos para escoltar y proteger. </h3>
@@ -47,11 +45,10 @@ import vFooter from '../components/UI/v-footer.vue';
                 </li>
             </ul>
             <p class="mt-5 text-gray-800 font-bold">CON GARTOLL SU PROTECCIÓN Y SEGURIDAD ESTARÁN GARANTIZADOS!</p>
-            <button class="bg-secondary px-10 py-1 mt-5 rounded-lg text-white font-bold text-xl">Solicitar</button>
         </div>
         <img class="object-cover w-full lg:w-1/2 h-96 rounded-lg" src="/vigilancia.webp" alt="">
     </section>
-    <section class="w-full max-w-7xl mx-auto px-5 lg:px-10 flex flex-col lg:flex-row mb-14" id="vigilancia">
+    <section class="w-full max-w-7xl mx-auto px-5 lg:px-10 flex flex-col lg:flex-row mb-14 items-center" id="vigilancia">
         <img class="object-cover w-full lg:w-1/2 h-96 rounded-lg" src="/poli.webp" alt="https://www.freepik.es/foto-gratis/primer-plano-camara-cctv-pared_19138655.htm#query=security%20cameras&position=8&from_view=search&track=ais">
 
         <div class="px-5 lg:px-10 py-5 w-full lg:w-1/2">
@@ -80,10 +77,9 @@ import vFooter from '../components/UI/v-footer.vue';
                     <p class="text-sm text-gray-700">Ofrecemos servicios de vigilancia para los eventos. Si quiere que su evento o reunión social este bien vigilada y protegida podemos ayudarle.</p>
                 </li>
             </ul>
-            <button class="bg-secondary px-10 py-1 mt-5 rounded-lg text-white font-bold text-xl">Solicitar</button>
         </div>
     </section>
-    <section class="w-full max-w-7xl mx-auto px-5 lg:px-10 flex flex-col-reverse lg:flex-row mb-20" id="transporte-dinero">
+    <section class="w-full max-w-7xl mx-auto px-5 lg:px-10 flex flex-col-reverse lg:flex-row mb-20 items-center" id="transporte-dinero">
         <div class="px-5 lg:px-10 py-5 w-full lg:w-1/2">
             <h2 class="text-3xl lg:text-4xl uppercase font-extrabold text-gray-800">Transporte de Dinero</h2>
             <h3 class="text-gray-700 text-lg font-bold" >Transporte seguro en Guinea Ecuatorial</h3>
@@ -115,7 +111,6 @@ import vFooter from '../components/UI/v-footer.vue';
                 </li>
             </ul>
            
-            <button class="bg-secondary px-10 py-1 mt-5 rounded-lg text-white font-bold text-xl">Solicitar</button>
         </div>
         <img class="object-cover w-full lg:w-1/2 h-96 rounded-lg" src="/vigilancia.webp" alt="">
     </section>

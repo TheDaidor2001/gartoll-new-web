@@ -27,8 +27,8 @@ const toggleMenu = () => {
                     <RouterLink active-class="text-secondary" :to="{ name: 'inicio' }" class="hover:text-secondary font-bold text-md transition-colors">Inicio
                     </RouterLink>
                     <RouterLink :to="{name: 'servicios'}" active-class="text-secondary" class="hover:text-secondary font-bold text-md transition-colors">Servicios</RouterLink>
-                    <li class="text-white">Sobre Nosotros</li>
-                    <li class="text-white">Noticias</li>
+                    <RouterLink :to="{name: 'aboutUs'}" active-class="text-secondary" class="hover:text-secondary font-bold text-md transition-colors">Información</RouterLink>
+                    <RouterLink :to="{name: 'noticias'}" active-class="text-secondary" class="hover:text-secondary font-bold text-md transition-colors">Noticias</RouterLink>
                     <button
                         class="border-2 border-secondary text-secondary rounded-3xl py-1 block w-1/2 mx-auto hover:bg-secondary hover:text-white font-bold transition-colors">Contáctanos</button>
                 </ul>
@@ -36,7 +36,7 @@ const toggleMenu = () => {
                     <RouterLink :to="{ name: 'inicio' }" active-class="text-secondary" class="hover:text-secondary font-bold text-sm transition-colors">Inicio
                     </RouterLink>
                     <RouterLink :to="{name: 'servicios'}" active-class="text-secondary" class="hover:text-secondary font-bold text-sm transition-colors">Servicios</RouterLink>
-                    <li class="text-white">Información</li>
+                    <RouterLink :to="{name: 'aboutUs'}" active-class="text-secondary" class="hover:text-secondary font-bold text-sm transition-colors">Información</RouterLink>
                     <RouterLink :to="{name: 'noticias'}" active-class="text-secondary" class="hover:text-secondary font-bold text-sm transition-colors">Noticias</RouterLink>
                     <button
                         class="border-2 border-secondary text-secondary rounded-3xl px-3 py-1 block w-1/2 mx-auto hover:bg-secondary hover:text-white font-bold transition-colors">Contáctanos</button>
