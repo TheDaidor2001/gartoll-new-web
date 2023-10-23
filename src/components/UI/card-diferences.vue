@@ -1,19 +1,19 @@
 <script setup>
-    defineProps({
-        title: {
-            type: String
-        },
-        description: {
-            type: String,
-        },
-        color: {
-            type: String
-        }
-    })
+defineProps({
+    title: {
+        type: String
+    },
+    description: {
+        type: String,
+    },
+    color: {
+        type: String
+    }
+})
 </script>
 
 <template>
-    <div class="bg-white shadow-xl p-7 rounded-lg">
+    <div class="bg-white shadow-xl p-7 rounded-lg" v-motion-slide-visible-right>
         <div class="rounded-full w-14 h-14 flex justify-center items-center mx-auto md:mx-0" :class="color">
             <slot />
         </div>

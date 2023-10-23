@@ -9,7 +9,7 @@ import headingText from '../components/UI/heading-text.vue';
 import cardServices from '../components/UI/card-services.vue';
 import cardAnimated from '../components/UI/card-animated.vue';
 
-import {formatDate} from '../helpers'
+import { formatDate } from '../helpers'
 
 
 const noticiasStore = useNoticiasStore()
@@ -25,7 +25,8 @@ onMounted(() => {
   <section class="pt-20 pb-20 xl:pb-0 overflow-hidden h-auto bg-hero-section bg-cover">
     <div class="flex flex-col lg:flex-row gap-5 items-center justify-center max-w-7xl mx-auto">
       <div class="w-full xl:w-1/2">
-        <h1 class="text-6xl lg:text-8xl text-center font-black  text-gray-900 uppercase animate-fade-down">Gartoll</h1>
+        <h1 class="text-6xl lg:text-8xl text-center font-black  text-gray-900 uppercase">Gartoll
+        </h1>
         <h2 class="text-center text-gray-800 text-4xl lg:text-6xl font-semibold uppercase">Seguridad Privada</h2>
         <div class="w-full xl:w-2/3 mx-auto">
           <p class="mt-5 text-center text-lg mx-auto text-gray-700 px-10 lg:px-0">Nuestro equipo de seguridad privada está
@@ -88,7 +89,7 @@ onMounted(() => {
         Saber más
       </button>
     </div>
-    <img class="w-[500px]" src="/seguridad.webp" alt="">
+    <img class="w-[500px] rounded-lg" src="/seguridad.webp" alt="">
   </section>
 
   <section class="my-20 px-10 max-w-7xl mx-auto">
@@ -144,16 +145,16 @@ onMounted(() => {
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10 items-center">
         <div class="flex flex-col gap-5 items-center">
           <cardServices title="Vigilancia" description="Tenemos sistemas de vigilancia para empresas, casas particulares y también
-            para los eventos." position="text-end" number="1" to="/servicios"/>
+            para los eventos." position="text-end" number="1" to="/servicios" />
           <cardServices title="Guarda Espaldas"
             description="Tenemos personal muy competente para escoltar y proteger a cualquiera que solicite este servicio."
-            position="text-end" number="2" to="/servicios#vigilancia"/>
+            position="text-end" number="2" to="/servicios#vigilancia" />
         </div>
         <img class="w-64 mx-auto hidden lg:block" src="/security.png" alt="">
         <div class="flex flex-col gap-5 items-center">
           <cardServices title="Cámaras y alarmas"
             description="Disponemos de cámaras de seguridad y alarmas de alta calidad para poder localizar a los intrusos."
-            position="text-start" number="3" to="/servicios"/>
+            position="text-start" number="3" to="/servicios" />
           <cardServices title="Transporte de dinero"
             description="Tenemos camiones blindados muy seguros para asegurar los transportes del dinero en cualquier parte del pais."
             position="text-start" number="4" to="/servicios" />
@@ -251,11 +252,14 @@ onMounted(() => {
       description="Las últimas noticias mas relevantes de nuestra empresa o del sector de la seguridad privada." />
     <div class="flex flex-col lg:flex-row my-20 gap-5 justify-center">
       <div class="w-full lg:w-1/2 mx-auto flex flex-col justify-center">
-        <img :src="noticiasStore.noticiasIndex[0]?.imagen" :alt="noticiasStore.noticiasIndex[0]?.alt" class="rounded-lg w-full">
+        <img :src="noticiasStore.noticiasIndex[0]?.imagen" :alt="noticiasStore.noticiasIndex[0]?.alt"
+          class="rounded-lg w-full">
         <h1 class="text-xl lg:text-3xl font-bold uppercase text-gray-900 mt-3">{{ noticiasStore?.noticiasIndex[0]?.titulo
         }}</h1>
-        <p class="text-md lg:text-lg text-gray-800 font-thin mt-2 truncate overflow-hidden">{{ noticiasStore?.noticiasIndex[0]?.contenido }}</p>
-        <p class="font-normal text-black mt-1">Publicado: {{ formatDate(noticiasStore?.noticiasIndex[0]?.fecha.toDate()) }}</p>
+        <p class="text-md lg:text-lg text-gray-800 font-thin mt-2 truncate overflow-hidden">{{
+          noticiasStore?.noticiasIndex[0]?.contenido }}</p>
+        <p class="font-normal text-black mt-1">Publicado: {{ formatDate(noticiasStore?.noticiasIndex[0]?.fecha.toDate())
+        }}</p>
         <RouterLink :to="`/noticias/${noticiasStore?.noticiasIndex[0]?.id}`"
           class="text-center text-sm lg:text-md font-normal block bg-secondary mt-2 text-white px-5 py-2 rounded-lg hover:bg-amber-300 transition-colors lg:w-1/3 w-2/3 shadow-md">
           Saber más</RouterLink>
@@ -267,7 +271,7 @@ onMounted(() => {
             <h1 class="text-sm lg:text-xl uppercase font-bold text-gray-900">{{ noticia.titulo }}</h1>
             <p></p>
             <p class="font-normal text-black mt-1">Publicado: {{ formatDate(noticia.fecha.toDate()) }}</p>
-            <RouterLink :to="{name: 'noticia', params: {id: noticia.id}}"
+            <RouterLink :to="{ name: 'noticia', params: { id: noticia.id } }"
               class="text-center text-md font-normal block bg-secondary mt-2 text-white px-5 py-2 rounded-lg hover:bg-amber-300 transition-colors w-40 shadow-md mx-auto lg:mx-0">
               Saber más</RouterLink>
           </div>

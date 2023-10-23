@@ -1,16 +1,17 @@
 <script setup>
-    defineProps({
-        title: {
-            type: String,
-        },
-        info: {
-            type: String
-        }
-    })
+defineProps({
+    title: {
+        type: String,
+    },
+    info: {
+        type: String
+    }
+})
 </script>
 
 <template>
-    <div class="bg-white text-center lg:text-left w-full md:w-2/3 mx-auto lg:w-1/3 flex flex-col gap-5 px-3 lg:pl-10 py-10 rounded-lg shadow-xl animate-fade-right">
+    <div
+        class="bg-white text-center lg:text-left w-full md:w-2/3 mx-auto lg:w-1/3 flex flex-col gap-5 px-3 lg:pl-10 py-10 rounded-lg shadow-xl">
         <div class="bg-secondary w-10 h-10 mx-auto lg:mx-0 rounded-full flex items-center justify-center">
             <slot />
         </div>
